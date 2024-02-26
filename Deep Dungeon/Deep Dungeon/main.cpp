@@ -8,7 +8,8 @@ int main()
 	Image icon = LoadImage("resources/icon.png");
 
 	//Setting up window and other basics
-	InitWindow(1920, 1080, "Deep Dungeon");
+	InitWindow(0, 0, "Deep Dungeon");
+	ToggleFullscreen();
 	InitAudioDevice();
 	SetWindowIcon(icon);
 	SetTargetFPS(60);
