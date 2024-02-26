@@ -74,24 +74,24 @@ void Player::level_up()
 		DrawRectangleRec(dexterity_cross2, WHITE);
 		DrawRectangleRec(endurance_cross1, WHITE);
 		DrawRectangleRec(endurance_cross2, WHITE);
-		if (CheckCollisionPointRec(mouse_pos, Rectangle{ strength_rec.x, strength_rec.y - 20, strength_rec.width, strength_rec.height }) && IsMouseButtonPressed(0) && points_left > 0)
+		if (CheckCollisionPointRec(mouse_pos, strength_rec) && IsMouseButtonPressed(0) && points_left > 0)
 		{
 			points_left--;
 			strength++;
 		}
-		if (CheckCollisionPointRec(mouse_pos, Rectangle{ vitality_rec.x, vitality_rec.y - 20, vitality_rec.width, vitality_rec.height }) && IsMouseButtonPressed(0) && points_left > 0)
+		if (CheckCollisionPointRec(mouse_pos, vitality_rec) && IsMouseButtonPressed(0) && points_left > 0)
 		{
 			points_left--;
 			hp += 10;
 			vitality++;
 			max_hp = vitality * 10;
 		}
-		if (CheckCollisionPointRec(mouse_pos, Rectangle{ dexterity_rec.x, dexterity_rec.y - 20, dexterity_rec.width, dexterity_rec.height }) && IsMouseButtonPressed(0) && points_left > 0)
+		if (CheckCollisionPointRec(mouse_pos, dexterity_rec) && IsMouseButtonPressed(0) && points_left > 0)
 		{
 			points_left--;
 			dexterity++;
 		}
-		if (CheckCollisionPointRec(mouse_pos, Rectangle{ endurance_rec.x, endurance_rec.y - 20, endurance_rec.width, endurance_rec.height }) && IsMouseButtonPressed(0) && points_left > 0)
+		if (CheckCollisionPointRec(mouse_pos, endurance_rec) && IsMouseButtonPressed(0) && points_left > 0)
 		{
 			points_left--;
 			endurance++;
